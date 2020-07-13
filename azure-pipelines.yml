@@ -16,7 +16,7 @@ steps:
   displayName: 'Install Node.js'
 - task: OwaspZapScan@2
   inputs:
-    ZapApiUrl: 'zap:8080'
+    ZapApiUrl: '127.0.0.1'
     ZapApiKey: '42oiso7555vp2o6fn45kf9jq6t'
     TargetUrl: 'https://owasp.org/www-project-webgoat/'
 - script: |
