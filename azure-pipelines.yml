@@ -19,6 +19,15 @@ steps:
     ZapApiUrl: 'http://localhost.sebank.se:8004'
     ZapApiKey: '42oiso7555vp2o6fn45kf9jq6t'
     TargetUrl: 'https://owasp.org/www-project-webgoat/'
+
+- task: SnykSecurityScan@0
+  inputs:
+    serviceConnectionEndpoint: 'Snyk Authentication'
+    testType: 'app'
+    severityThreshold: 'medium'
+    monitorOnBuild: true
+    failOnIssues: true
+    projectName: 'Testing'
 - script: |
     npm install
     npm run build
