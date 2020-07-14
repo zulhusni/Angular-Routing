@@ -22,7 +22,7 @@ steps:
 
 - task: SnykSecurityScan@0
   inputs:
-    serviceConnectionEndpoint: 'Snyk Authentication'
+    serviceConnectionEndpoint: 'Snyk'
     testType: 'app'
     monitorOnBuild: true
     failOnIssues: true
