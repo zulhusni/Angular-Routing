@@ -26,6 +26,7 @@ steps:
     testType: 'app'
     monitorOnBuild: true
     failOnIssues: true
+    
 - script: |
     npm install
     npm run build
