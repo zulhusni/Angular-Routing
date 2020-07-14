@@ -22,10 +22,12 @@ steps:
 
 - task: SnykSecurityScan@0
   inputs:
-    serviceConnectionEndpoint: 'Snyk'
+    serviceConnectionEndpoint: 'Snyk Authentication'
     testType: 'app'
     monitorOnBuild: true
     failOnIssues: true
+    projectName: 'zulhusni/mytaman'
+    organization: 'f1c111fc-e31c-4450-944e-0cdf3ab5336e'
     
 - script: |
     npm install
