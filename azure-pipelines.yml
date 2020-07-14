@@ -19,7 +19,10 @@ steps:
 #    ZapApiUrl: 'http://localhost.sebank.se:8004'
 #    ZapApiKey: '42oiso7555vp2o6fn45kf9jq6t'
 #    TargetUrl: 'https://owasp.org/www-project-webgoat/'
-
+- script: |
+    npm install
+    npm run build
+  displayName: 'npm install and build'
 - task: SnykSecurityScan@0
   inputs:
     serviceConnectionEndpoint: 'Snyk Authentication'
@@ -29,7 +32,4 @@ steps:
     projectName: 'zulhusni/mytaman'
     organization: 'f1c111fc-e31c-4450-944e-0cdf3ab5336e'
     
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+
